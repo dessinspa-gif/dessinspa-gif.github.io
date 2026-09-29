@@ -1,0 +1,20 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Dessin · Arquitectura y construcción</title>
+<script>
+  // GitHub Pages sirve este archivo ante cualquier ruta desconocida.
+  // Lo traducimos a la ruta interna del sitio (#/...) sin que el visitante vea el error.
+  (function () {
+    var p = location.pathname.replace(/^\/+|\/+$/g, '');
+    var viejas = {
+      'proyectos/casas': 'proyectos',
+      'proyectos/cabanas': 'proyectos',
+      'proyectos/hoteleria': 'proyectos',
+      'proyectos/habitacionales': 'proyectos',
+      'proyectos/comerciales': 'proyectos'
+    };
+    if (viejas[p]) p = viejas[p];
+    location.replace('/' + (p ? '#/' + p : '') + location.search);
+  })();
+</script>
+<p style="font:14px/1.5 system-ui;margin:40px">Redirigiendo… <a href="/">ir al inicio</a></p>
